@@ -1,0 +1,71 @@
+@import 'bourbon';
+@import 'grid_settings';
+@import 'neat';
+
+@mixin page-gutter {
+  padding-left: $page-gutter;
+  padding-right: $page-gutter;
+}
+
+span.amp {
+  font-family: Baskerville, Palatino, "Book Antiqua", serif;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: -0.05em;
+  margin-left: -0.15em;
+}
+
+.course-offering {
+  @include outer-container;
+}
+
+.course-intro {
+  @include span-columns(6);
+  // @include shift(1);
+  @include pad(3em $page-gutter 2em);
+
+  text-align: center;
+  background-image: image-url('squairy_light.png');
+
+  @include media($tablet) {
+    // @include span-columns(4);
+    font-size: 1.5em;
+  }
+}
+
+.course-summary {
+  @include span-columns(6);
+  @include page-gutter;
+
+  @include media($desktop) {
+    ul {
+      @include row();
+      margin: 0;
+    }
+
+    li {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+
+      margin: 0 0 1.5em;
+
+    }
+  }
+}
+
+
+.actions.primary {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 90;
+
+  text-align: center;
+  background-color: #e0e0e0;
+  padding: 1rem 5% !important;
+
+  & > .button {
+    display: inline-block;
+    margin: 0 3px;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'neat-helpers';
+
+// Baseline font variables
+$base-line-height: 27;
+$base-font-size: 18;
+
+$visual-grid: true;
+$visual-grid-color: #ccccff;
+
+$grid-columns: 6;
+$gutter: ((($base-line-height / 2) / $base-font-size) * 1em);
+
+$page-gutter: 1.5em;
+
+$tablet: new-breakpoint(min-width 500px 8);
+$desktop: new-breakpoint(min-width 960px 12);
+$cinemascope: new-breakpoint(min-width 1280px 16);
